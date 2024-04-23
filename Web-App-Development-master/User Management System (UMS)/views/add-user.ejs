@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="/styles/favicon-16x16.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/styles/favicon-32x32.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/styles/apple-touch-icon.png"/>
+    <title>Add New User</title>
+</head>
+<body>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">New User</li>
+        </ol>
+    </nav>
+
+    <% if(alert) { %>
+    <div class="alert alert-success alert-dismissable show" role="alert">
+        <% alert %>
+        <button class="btn-close" data-bs-dismiss="alert" aria-label="Close">X</button>
+    </div>
+    <% } %>
+
+    <form class="row g-3 needs-validation" method="POST" action="/add_user">
+        <div class="col-6">
+            <div class="form-floating mb-3">
+                <label for="floatingInput">First Name</label>
+                <input type="text" class="form-control" id="floatingInput" placeholder="First Name" name="first_name" />
+            </div>
+            <br>
+            <div class="form-floating mb-3">
+                <label for="floatingInput">Last Name</label>
+                <input type="text" class="form-control" id="floatingInput" placeholder="Last Name" name="last_name" />
+            </div>
+            <br>
+            <div class="form-floating mb-3">
+                <label for="floatingInput">Email</label>
+                <input type="text" class="form-control" id="floatingInput" placeholder="test@test.com" name="email" />
+            </div>
+            <br>
+            <div class="form-floating mb-3">
+                <label for="floatingInput">Phone</label>
+                <input type="text" class="form-control" id="floatingInput" placeholder="+44 782 367 331" name="phone" />
+            </div>
+            <br>
+            <div class="form-floating mb-3">
+                <label for="floatingInput">Position</label>
+                <input type="text" class="form-control" id="floatingInput" placeholder="E.g. Software Developer" name="position" />
+            </div>
+            <br>
+            <div class="form-floating mb-3">
+                <label for="floatingInput">Department</label>
+                <input type="text" class="form-control" id="floatingInput" placeholder="E.g. IT" name="department" />
+            </div>
+            <br>
+            <div class="form-floating mb-3">
+                <label for="floatingInput">Status</label>
+                <input type="text" class="form-control" id="floatingInput" placeholder="E.g. active" name="status" />
+            </div>
+            <br>
+        </div>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="/styles/favicon-16x16.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/styles/favicon-32x32.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/styles/apple-touch-icon.png"/>
+    <title>User Management System - Home</title>
+</head>
+<body>
+    <%- include('./partials/navbar') %>
+
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Comments</th>
+                <th scope="col">Status</th>
+                <th scope="col">Position</th>
+                <th scope="col">Department</th>
+                <th scope="col" class="text-end">Actions</th> 
+                <!-- Actions will allow us to edit/delete a user -->
+            </tr>
+        </thead>
+
+        <tbody>
+            <% rows.forEach((user) => { %>
+            <tr>
+                <td><%= user.first_name %></td>
+                <td><%= user.last_name %></td>
+                <td><%= user.email %></td>
+                <td><%= user.phone %></td>
+                <td><%= user.comments %></td>
+                <td><%= user.status %></td>
+                <td><%= user.position %></td>
+                <td><%= user.department %></td>
+                <td>
+                    <span>
+                        <a href="/edit_user/<%= user.id %>" class="btn btn-primary">
+                            <i class="bi bi-pencil"></i>
+                        </a>
+                        <a href="/delete_user/<%= user.id %>" class="btn btn-primary">
+                            <i class="bi bi-x"></i>
+                        </a>
+                    </span>
+                </td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    
+</body>
+</html>
