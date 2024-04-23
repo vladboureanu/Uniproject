@@ -3,12 +3,12 @@
 ## This repository contains the projects and all related files built throughout the Web Application Development (QHO540) module
 
 ## Cloning the repository
-### `git clone https://github.com/nezumiCodes/Web-App-Development.git`
+### `git clone https://github.com/vladboureanu/Uniproject.git`
 
 <br>
 
 ## Cloning only one branch 
-### `git clone --single-branch -b <branch_name> https://github.com/nezumiCodes/Web-App-Development.git`
+### `git clone --single-branch -b <branch_name> https://github.com/vladboureanu/Uniproject.git`
 
 <br>
 
